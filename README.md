@@ -27,7 +27,6 @@ The implemented algorithm is a **Binary Insertion Sort**, which improves upon th
 
 ## ⚙️ Features
 - ✅ **Binary Insertion Sort** (optimized version)  
-- 🧩 **Bridge pattern** for separating sorting logic and metric tracking  
 - 📊 **Performance metrics** — comparisons, swaps, array accesses  
 - 🚀 **Benchmark runner** for analyzing runtime on different input sizes  
 - 🧪 **JUnit 5 tests** for validation and reliability  

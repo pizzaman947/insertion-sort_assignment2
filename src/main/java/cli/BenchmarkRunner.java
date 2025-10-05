@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
+import java.util.Locale;
 
 public class BenchmarkRunner {
     public static void main(String[] args) {
@@ -47,13 +48,14 @@ public class BenchmarkRunner {
             if (file.length() == 0) {
                 writer.write("array_size,input_type,time_ms,comparisons,swaps,array_accesses\n");
             }
-            writer.write(String.format("%d,%s,%.4f,%d,%d,%d\n",
+            String line = String.format(java.util.Locale.US, "%d,%s,%.4f,%d,%d,%d\n",
                     n,
                     type,
                     timeMs,
                     tracker.getComparisons(),
                     tracker.getSwaps(),
-                    tracker.getArrayAccesses()));
+                    tracker.getArrayAccesses());
+            writer.write(line);
             System.out.println("Results saved to " + csvFile);
         } catch (IOException e) {
             System.err.println("Error writing to CSV file: " + e.getMessage());

@@ -73,16 +73,25 @@ or using Maven:
 mvn exec:java "-Dexec.args=10000 random"
 ```
 
+### Available input_type values:
+```
+random: Array with randomly shuffled integers.
+
+sorted: A pre-sorted array.
+
+reversed: An array sorted in descending order.
+
+nearly: A nearly sorted array with minor shuffling.
+```
 ---
 
 ## 🧾 Example Output
 
 ```
-Benchmark Results for n = 10000
-Comparisons: 49872
-Swaps: 49012
-Array Accesses: 99124
-Execution Time: 84 ms
+Array sorted (random, n=10000)
+Time: 18.7801 ms
+Metrics -> Comparisons: 118981, Swaps/Insertions: 9999, Array Accesses: 49735255
+Results saved to benchmarks/results.csv
 ```
 
 ---

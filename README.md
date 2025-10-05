@@ -101,9 +101,10 @@ Results saved to benchmarks/results.csv
 ## 🧪 Testing
 The project uses **JUnit 5** for validation of sorting correctness across:
 - Empty arrays
+- Single element arrays
 - Already sorted arrays
 - Reverse-sorted arrays
-- Randomly generated arrays
+- Duplicate elements arrays
 
 To run tests:
 ```bash

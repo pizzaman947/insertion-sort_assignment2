@@ -1,9 +1,9 @@
 package metrics;
 
 public class PerformanceTracker {
-    private int comparisons;
-    private int swaps;
-    private int arrayAccesses;
+    private long comparisons;
+    private long swaps;
+    private long arrayAccesses;
 
     public void incrementComparisons() {
         comparisons++;
@@ -12,20 +12,24 @@ public class PerformanceTracker {
     public void incrementSwaps() {
         swaps++;
     }
-
+    
     public void incrementArrayAccesses() {
         arrayAccesses++;
     }
+    
+    public void incrementArrayAccesses(int count) {
+        arrayAccesses += count;
+    }
 
-    public int getComparisons() {
+    public long getComparisons() {
         return comparisons;
     }
 
-    public int getSwaps() {
+    public long getSwaps() {
         return swaps;
     }
 
-    public int getArrayAccesses() {
+    public long getArrayAccesses() {
         return arrayAccesses;
     }
 
@@ -37,6 +41,6 @@ public class PerformanceTracker {
 
     @Override
     public String toString() {
-        return "Comparisons: " + comparisons + ", Swaps: " + swaps + ", Array Accesses: " + arrayAccesses;
+        return "Metrics -> Comparisons: " + comparisons + ", Swaps/Insertions: " + swaps + ", Array Accesses: " + arrayAccesses;
     }
 }

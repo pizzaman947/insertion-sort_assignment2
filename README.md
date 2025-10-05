@@ -1,15 +1,20 @@
 # Assignment 2 — Insertion Sort Implementation
 
-This repository contains an optimized implementation of the **Insertion Sort** algorithm with detailed **performance tracking** and **benchmarking** tools.  
-The project demonstrates proper algorithmic analysis, clean code principles, and the use of the **Bridge** design pattern for metric tracking.
+This repository contains a comprehensive implementation of the **Binary Insertion Sort** algorithm in Java, developed as part of an assignment on algorithmic analysis. The project includes **performance metric tracking**, a **command-line interface** for benchmarking, and thorough unit tests.
 
 ---
 
 ## 🎯 Goal
-Implement and analyze the performance of the **Insertion Sort** algorithm, focusing on:
-- Algorithmic efficiency and time complexity analysis  
-- Proper use of object-oriented principles  
-- Benchmarking and visualization of runtime performance  
+The goal of this project is to implement an optimized version of the **Insertion Sort** algorithm and analyze its performance. The implementation uses a binary search to find the correct insertion point for each element, reducing the number of comparisons compared to a classic linear scan. The project is instrumented with a **PerformanceTracker** to collect key metrics such as comparisons, swaps (insertions), and array accesses.
+
+---
+---
+
+## ⚙️ Features
+- ✅ **Optimized Insertion Sort**: Implemented using a binary search (Binary Insertion Sort) to minimize comparisons, making it efficient for nearly sorted data.
+- 📊 **Performance metrics** — comparisons, swaps, array accesses  
+- 🚀 **Benchmark runner** for analyzing runtime on different input sizes  
+- 🧪 **JUnit 5 tests** for validation and reliability  
 
 ---
 
@@ -17,21 +22,19 @@ Implement and analyze the performance of the **Insertion Sort** algorithm, focus
 
 The implemented algorithm is a **Binary Insertion Sort**, which improves upon the classic insertion sort by using binary search to find the correct insertion position for each element.
 
-| Case | Description | Time Complexity | Space Complexity |
-|------|--------------|-----------------|------------------|
-| **Best Case** | Already sorted array | **O(n)** | **O(1)** |
-| **Average Case** | Random array | **O(n²)** | **O(1)** |
-| **Worst Case** | Reverse sorted array | **O(n²)** | **O(1)** |
+# Algorithmic Complexity
+The implemented Binary Insertion Sort has the following theoretical complexity:
 
----
+Time Complexity:
 
-## ⚙️ Features
-- ✅ **Binary Insertion Sort** (optimized version)  
-- 📊 **Performance metrics** — comparisons, swaps, array accesses  
-- 🚀 **Benchmark runner** for analyzing runtime on different input sizes  
-- 🧪 **JUnit 5 tests** for validation and reliability  
+- Best Case: **Ω(n log n)** (for comparisons) and Ω(n) (for swaps) - Occurs on an already sorted array.
 
----
+- Average Case: **Θ(n^2)** - The number of swaps remains quadratic.
+
+- Worst Case: **O(n^2)** - Occurs on a reverse-sorted array due to the maximum number of element shifts required.
+
+Space Complexity: **O(1)** - The sort is performed in-place, requiring no significant auxiliary space.
+
 
 ## 📁 Project Structure
 

@@ -17,7 +17,7 @@ assignment2-insertion-sort/
 
 ## How to Run
 1. Run tests: `mvn test`
-2. Run benchmark: `mvn exec:java -Dexec.mainClass="cli.BenchmarkRunner"`
+2. Run benchmark: `mvn exec:java "-Dexec.args=100 random""`
 
 ## Features
 - Binary Insertion Sort

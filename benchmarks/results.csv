@@ -1,0 +1,2 @@
+array_size,input_type,time_ms,comparisons,swaps,array_accesses
+100,random,0,1368,532,99,5296

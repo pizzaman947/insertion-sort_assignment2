@@ -121,4 +121,4 @@ docs/performance-plots/
 ```
 
 ---
-
+### Author: Shomanov Rakhat (1st pair) - Insertion Sort (with optimizations for nearly-sorted data)
